@@ -224,6 +224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 371853110}
+  - component: {fileID: 371853111}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -245,6 +246,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &371853111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371853109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb634e6025b76d45bb727b72a8db739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallPrefab: {fileID: 4385499473010116350, guid: 3d09162f60fcac04f8bd3d58a6d6a325,
+    type: 3}
+  mazeSize: {fileID: 11400000, guid: 0201c3b87c8fe2047998fa83daeb7ae7, type: 2}
+  mazeOrigin: {fileID: 11400000, guid: d47bbed2c087e9b49b9badd80d612b68, type: 2}
+  cellSize: {fileID: 11400000, guid: 15d396926dc4eca4080278a858e0ea8c, type: 2}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,7 +579,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &1907320722
 GameObject:
   m_ObjectHideFlags: 0

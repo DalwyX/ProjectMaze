@@ -27,7 +27,7 @@ namespace ProjectMaze
 
             for (int i = 0; i <= mazeSize.value.x; i++)
             {
-                for (int k = 0; k < mazeSize.value.y; k++)
+                for (int k = 0; k <= mazeSize.value.y; k++)
                 {
                     Vector3 pos = mazeOrigin.value + new Vector3(i, 0, k) * cellSize.value;
                     Instantiate(pillarPrefab, pos, Quaternion.identity, transform);
