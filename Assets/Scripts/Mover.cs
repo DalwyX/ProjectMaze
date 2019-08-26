@@ -7,6 +7,7 @@ namespace ProjectMaze
     public class Mover : MonoBehaviour
     {
         [SerializeField] private float speed = 5;
+        [SerializeField] private float runSpeedMod = 2;
 
         private void Update()
         {
@@ -15,7 +16,8 @@ namespace ProjectMaze
 
             Vector3 dir = new Vector3(h, 0, v);
 
-            transform.Translate(dir * speed * Time.deltaTime);
+            float curSpeed = (Input.GetKey(KeyCode.LeftShift)) ? speed * runSpeedMod : speed;
+            transform.Translate(dir * curSpeed * Time.deltaTime);
         }
     } 
 }
