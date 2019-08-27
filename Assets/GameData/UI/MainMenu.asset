@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30873b05ab7836443a4201aaef2c5349, type: 3}
-  m_Name: CellSize
+  m_Script: {fileID: 11500000, guid: 78b186c5a3dec5c47b7f150b2cfe1dde, type: 3}
+  m_Name: MainMenu
   m_EditorClassIdentifier: 
-  val: 20
-  readOnly: 1
+  UIPrefab: {fileID: 886236278091438916, guid: f4ec6eea15798d74a945521473bed972, type: 3}
+  backButtonUI: {fileID: 0}
+  UITimeScale: 1
+  closeable: 0

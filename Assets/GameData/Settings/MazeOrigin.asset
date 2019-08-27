@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c415eb42317af60479e4f5350ae0eec2, type: 3}
+  m_Script: {fileID: 11500000, guid: 058813ada84e9234bae73d681088bad0, type: 3}
   m_Name: MazeOrigin
   m_EditorClassIdentifier: 
   val: {x: -250, y: 2, z: -250}
-  readOnly: 1
+  readOnly: 0

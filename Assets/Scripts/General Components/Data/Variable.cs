@@ -4,13 +4,12 @@ using UnityEngine;
 
 namespace GeneralComponents
 {
-    [CreateAssetMenu(fileName = "New Float Var", menuName = "General / Variables / Float")]
-    public class Float : ScriptableObject
+    public class Variable<T> : ScriptableObject
     {
-        [SerializeField] private float val;
+        [SerializeField] private T val;
         [SerializeField] private bool readOnly;
 
-        public float value
+        public T value
         {
             get
             {
@@ -26,5 +25,5 @@ namespace GeneralComponents
                 val = value;
             }
         }
-    } 
+    }
 }
