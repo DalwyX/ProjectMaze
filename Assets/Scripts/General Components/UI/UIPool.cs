@@ -12,7 +12,7 @@ namespace GeneralComponents
 
         private void Start()
         {
-            ShowUI(defaultUILayer);
+            OpenUI(defaultUILayer);
         }
 
         private void Update()
@@ -22,7 +22,7 @@ namespace GeneralComponents
                 UILayer element = uiStack.Peek().uiOnBackButton;
                 if (element != null)
                 {
-                    ShowUI(element);
+                    OpenUI(defaultUILayer);
                 }
                 else
                 {
@@ -31,8 +31,9 @@ namespace GeneralComponents
             }
         }
 
-        public void ShowUI(UILayer element)
+        public void OpenUI(Object o)
         {
+            UILayer element = (UILayer)o;
             if (!uiPool.ContainsKey(element))
             {
                 PoolNewUI(element);
@@ -52,7 +53,6 @@ namespace GeneralComponents
             {
                 UILayer element = uiStack.Pop();
                 uiPool[element].gameObject.SetActive(false);
-
                 SetActiveUI(uiStack.Peek());
             }
         }
@@ -63,7 +63,7 @@ namespace GeneralComponents
             uiPool.Add(element, c);
         }
 
-        public void SetActiveUI(UILayer element)
+        private void SetActiveUI(UILayer element)
         {
             uiPool[element].gameObject.SetActive(true);
             Time.timeScale = element.uiTimeScale;

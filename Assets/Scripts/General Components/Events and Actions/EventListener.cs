@@ -5,10 +5,14 @@ using UnityEngine.Events;
 
 namespace GeneralComponents
 {
+
+    [System.Serializable]
+    public class UnityEventWithArgument : UnityEvent<Object> { }
+
     public class EventListener : MonoBehaviour
     {
         [SerializeField] private GameEvent gameEvent;
-        [SerializeField] private UnityEvent response;
+        public UnityEventWithArgument response = new UnityEventWithArgument();
 
         private void OnEnable()
         {
@@ -22,9 +26,10 @@ namespace GeneralComponents
             gameEvent.Unsubscribe(this);
         }
 
-        public void Notify()
+        public void Notify(Object o = null)
         {
-            response?.Invoke();
+            response?.Invoke(o);
         }
     }
+
 }

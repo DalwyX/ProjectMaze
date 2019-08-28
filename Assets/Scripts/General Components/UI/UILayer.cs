@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GeneralComponents
 {
-    [CreateAssetMenu(fileName = "New UI Layer", menuName = "General / UI / UILayer")]
+    [CreateAssetMenu(fileName = "New UI Layer", menuName = "General Components / UI / UILayer")]
     public class UILayer : ScriptableObject
     {
         [SerializeField] private Canvas UIPrefab;
