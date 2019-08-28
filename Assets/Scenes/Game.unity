@@ -1936,11 +1936,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkbox
       objectReference: {fileID: 0}
-    - target: {fileID: 5793204006200881088, guid: 85bd193ab9657be458b12c06455657c1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6225673804460858809, guid: 85bd193ab9657be458b12c06455657c1,
         type: 3}
       propertyPath: m_LocalPosition.x

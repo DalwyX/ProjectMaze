@@ -6,6 +6,7 @@ namespace ProjectMaze
 {
     public class GroundCheckbox : MonoBehaviour
     {
+        Material mat;
         private bool isActive;
 
         private void OnCollisionEnter(Collision collision)
@@ -32,27 +33,18 @@ namespace ProjectMaze
             {
                 transform.GetChild(i).gameObject.SetActive(true);
             }
+            mat = GetComponentInChildren<MeshRenderer>().material;
         }
         private void FadeIn()
         {
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                MeshRenderer mr = transform.GetChild(i).GetComponent<MeshRenderer>();
-                if (mr == null) continue;
-                Color c = mr.material.GetColor("_EmissionColor") * 1.25f;
-                mr.material.SetColor("_EmissionColor", c);
-            }
+            Color c = mat.GetColor("_EmissionColor") * 1.25f;
+            mat.SetColor("_EmissionColor", c);
         }
 
         private void FadeOut()
         {
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                MeshRenderer mr = transform.GetChild(i).GetComponent<MeshRenderer>();
-                if (mr == null) continue;
-                Color c = mr.material.GetColor("_EmissionColor") * 0.8f;
-                mr.material.SetColor("_EmissionColor", c);
-            }
+            Color c = mat.GetColor("_EmissionColor") * 0.8f;
+            mat.SetColor("_EmissionColor", c);
         }
     }
 }
