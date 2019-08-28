@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 058813ada84e9234bae73d681088bad0, type: 3}
   m_Name: MazeOrigin
   m_EditorClassIdentifier: 
-  val: {x: -250, y: 2, z: -250}
+  val: {x: -250, y: 0, z: -250}
   readOnly: 0

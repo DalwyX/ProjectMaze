@@ -11,6 +11,7 @@ namespace ProjectMaze
         [SerializeField] private V3 mazeSize;
         [SerializeField] private V3 mazeOrigin;
         [SerializeField] private Float cellSize;
+        [SerializeField] private Vector3 spawnOffset = new Vector3(0, 2);
 
         private int horizontalIndexes;
         private int verticalIndexes;
@@ -37,7 +38,7 @@ namespace ProjectMaze
             {
                 for (int k = 0; k <= mazeSize.value.y; k++)
                 {
-                    Vector3 pos = mazeOrigin.value + new Vector3(cellSize.value / 2, 0) + new Vector3(i, 0, k) * cellSize.value;
+                    Vector3 pos = mazeOrigin.value + spawnOffset + new Vector3(cellSize.value / 2, 0) + new Vector3(i, 0, k) * cellSize.value;
                     Instantiate(wallPrefab, pos, Quaternion.identity, transform);
                 }
             }
@@ -46,7 +47,7 @@ namespace ProjectMaze
             {
                 for (int k = 0; k < mazeSize.value.y; k++)
                 {
-                    Vector3 pos = mazeOrigin.value + new Vector3(0, 0, cellSize.value / 2) + new Vector3(i, 0, k) * cellSize.value;
+                    Vector3 pos = mazeOrigin.value + spawnOffset + new Vector3(0, 0, cellSize.value / 2) + new Vector3(i, 0, k) * cellSize.value;
                     Instantiate(wallPrefab, pos, Quaternion.Euler(0, 90, 0), transform);
                 }
             }
