@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GeneralComponents;
 
 namespace ProjectMaze
 {
     public class GroundCheckbox : MonoBehaviour
     {
+        [SerializeField] private GameEvent checkboxActivated;
         Material mat;
         private bool isActive;
 
@@ -17,7 +19,7 @@ namespace ProjectMaze
             }
             else
             {
-                ActivateAllChildrens();
+                ActivateCheckbox();
                 isActive = true;
             }
         }
@@ -27,13 +29,18 @@ namespace ProjectMaze
             FadeOut();
         }
 
-        private void ActivateAllChildrens()
+        private void ActivateCheckbox()
         {
+            Destroy(transform.GetChild(0).gameObject);
+            Destroy(GetComponent<Collider>());
+            gameObject.AddComponent<BoxCollider>();
             for (int i = 0; i < transform.childCount; i++)
             {
                 transform.GetChild(i).gameObject.SetActive(true);
             }
-            mat = GetComponentInChildren<MeshRenderer>().material;
+            mat = transform.GetChild(1).GetComponent<MeshRenderer>().material;
+            checkboxActivated?.Action();
+            FadeOut();
         }
         private void FadeIn()
         {
