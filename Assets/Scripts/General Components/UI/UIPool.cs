@@ -68,6 +68,7 @@ namespace GeneralComponents
             uiPool[element].gameObject.SetActive(true);
             Time.timeScale = element.uiTimeScale;
             Cursor.lockState = element.cursorLock;
+            Cursor.visible = (Cursor.lockState != CursorLockMode.Locked);
             uiStack.Push(element);
         }
     } 
