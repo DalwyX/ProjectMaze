@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b186c5a3dec5c47b7f150b2cfe1dde, type: 3}
+  m_Name: InGame
+  m_EditorClassIdentifier: 
+  UIPrefab: {fileID: 886236278091438916, guid: 8d3d93dc4df27e247abc01ac30b49c53, type: 3}
+  backButtonUI: {fileID: 11400000, guid: 2b37f1107eeea5b4b84268a80a533d40, type: 2}
+  UITimeScale: 1
+  cursorLockMode: 1
+  closeable: 0

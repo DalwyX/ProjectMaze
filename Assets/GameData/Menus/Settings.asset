@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIPrefab: {fileID: 886236278091438916, guid: 4957e6979ebf7824a9f4fcd43f39c97b, type: 3}
   backButtonUI: {fileID: 0}
-  UITimeScale: 1
+  UITimeScale: 0
+  cursorLockMode: 0
   closeable: 1

@@ -22,7 +22,7 @@ namespace GeneralComponents
                 UILayer element = uiStack.Peek().uiOnBackButton;
                 if (element != null)
                 {
-                    OpenUI(defaultUILayer);
+                    OpenUI(element);
                 }
                 else
                 {
@@ -53,7 +53,7 @@ namespace GeneralComponents
             {
                 UILayer element = uiStack.Pop();
                 uiPool[element].gameObject.SetActive(false);
-                SetActiveUI(uiStack.Peek());
+                SetActiveUI(uiStack.Pop());
             }
         }
 
@@ -67,6 +67,7 @@ namespace GeneralComponents
         {
             uiPool[element].gameObject.SetActive(true);
             Time.timeScale = element.uiTimeScale;
+            Cursor.lockState = element.cursorLock;
             uiStack.Push(element);
         }
     } 

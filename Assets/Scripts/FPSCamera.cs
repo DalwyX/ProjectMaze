@@ -17,10 +17,10 @@ namespace ProjectMaze
             character = transform.parent;
         }
 
-        private void Start()
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+        //private void Start()
+        //{
+        //    Cursor.lockState = CursorLockMode.Locked;
+        //}
 
         private void Update()
         {
