@@ -12,12 +12,6 @@ namespace ProjectMaze
         [SerializeField] private Int currentTarget;
         [SerializeField] private Text activeScoreField;
         [SerializeField] private Text targetScoreField;
-        private Image fillImage;
-
-        private void Awake()
-        {
-            fillImage = GetComponent<Image>();
-        }
 
         public void UpdateScore()
         {
@@ -29,12 +23,6 @@ namespace ProjectMaze
             if (targetScoreField != null && currentTarget != null)
             {
                 targetScoreField.text = currentTarget.value.ToString();
-            }
-
-            if (fillImage != null && activeScore != null && currentTarget != null)
-            {
-                float p = activeScore.value / currentTarget.value;
-                fillImage.fillAmount = p;
             }
         }
     } 

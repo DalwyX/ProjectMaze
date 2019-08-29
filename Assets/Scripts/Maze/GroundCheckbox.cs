@@ -8,7 +8,9 @@ namespace ProjectMaze
     public class GroundCheckbox : MonoBehaviour
     {
         [SerializeField] private GameEvent checkboxActivated;
-        Material mat;
+        [SerializeField] private Material checkboxOnMat;
+        private MeshRenderer mr;
+        private Material mat;
         private bool isActive;
 
         private void OnCollisionEnter(Collision collision)
@@ -31,14 +33,10 @@ namespace ProjectMaze
 
         private void ActivateCheckbox()
         {
-            Destroy(transform.GetChild(0).gameObject);
-            Destroy(GetComponent<Collider>());
-            gameObject.AddComponent<BoxCollider>();
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                transform.GetChild(i).gameObject.SetActive(true);
-            }
-            mat = transform.GetChild(1).GetComponent<MeshRenderer>().material;
+            transform.GetChild(0).gameObject.SetActive(true);
+            mr = GetComponent<MeshRenderer>();
+            mr.sharedMaterial = checkboxOnMat;
+            mat = mr.material;
             checkboxActivated?.Action();
             FadeOut();
         }

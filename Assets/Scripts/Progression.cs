@@ -19,7 +19,6 @@ namespace ProjectMaze
 
         public void AddPoint()
         {
-            Debug.Log("хай");
             if (currentScore != null && currentTarget != null)
             {
                 currentScore.value++;
