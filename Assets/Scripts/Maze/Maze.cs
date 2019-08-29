@@ -52,6 +52,9 @@ namespace ProjectMaze
                 pathStack.Push(neighbour);
                 visitedCells[activeCell.x, activeCell.y] = true;
             }
+
+            // отрефакторить
+            missingHorWalls[12, 0] = true;
         }
 
         private Vector2Int GetNeighbour(Vector2Int cell)
