@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using GeneralComponents;
 
 namespace ProjectMaze
@@ -37,7 +35,7 @@ namespace ProjectMaze
             mr = GetComponent<MeshRenderer>();
             mr.sharedMaterial = checkboxOnMat;
             mat = mr.material;
-            checkboxActivated?.Action();
+            checkboxActivated?.Notify();
             FadeOut();
         }
         private void FadeIn()

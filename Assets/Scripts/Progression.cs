@@ -15,6 +15,7 @@ namespace ProjectMaze
         {
             currentScore.value = 0;
             currentTarget.value = targets[0];
+            Time.timeScale = 1;
         }
 
         public void AddPoint()

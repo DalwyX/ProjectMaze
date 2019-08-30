@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 7941373002918566880}
   - component: {fileID: 7941373002918566815}
   - component: {fileID: 1173628832608432045}
-  - component: {fileID: 4261813090074540161}
-  - component: {fileID: 1485459563}
-  - component: {fileID: 671539507387800735}
-  - component: {fileID: 46629935198842818}
+  - component: {fileID: 386843337442659156}
+  - component: {fileID: 3799858406194432706}
+  - component: {fileID: 4413645384590916186}
+  - component: {fileID: 340097567261231731}
   m_Layer: 0
   m_Name: UIController
   m_TagString: Untagged
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a5371e427f63d4c8de4aec0b35e063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4261813090074540161
+--- !u!114 &386843337442659156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,10 +70,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7941373002918566814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e62e373ff2c47489eb15d787a8e630, type: 3}
+  m_Script: {fileID: 11500000, guid: d5c91ba7d8467254a8aec7c3f575aa04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 38920419a40630543a16cf79f66a958e, type: 2}
+  gameEvent: {fileID: 11400000, guid: 843cd42cf5849094fbfca287e6c2efb3, type: 2}
+  priority: 0
   response:
     m_PersistentCalls:
       m_Calls:
@@ -88,7 +89,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1485459563
+--- !u!114 &3799858406194432706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,10 +98,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7941373002918566814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e62e373ff2c47489eb15d787a8e630, type: 3}
+  m_Script: {fileID: 11500000, guid: eb4ceec5b4fb38441b286d51f6abe097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameEvent: {fileID: 11400000, guid: 39f05f2c578d25b4dbd0f4fc13a27591, type: 2}
+  priority: 0
   response:
     m_PersistentCalls:
       m_Calls:
@@ -115,7 +117,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &671539507387800735
+--- !u!114 &4413645384590916186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,10 +126,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7941373002918566814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e62e373ff2c47489eb15d787a8e630, type: 3}
+  m_Script: {fileID: 11500000, guid: 96db1d444769dd84ba9788ae580d98b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 3417674f04aa39446a3f89402f8abfc1, type: 2}
+  gameEvent: {fileID: 11400000, guid: 4f841ac6572d8e649b88b401c9e465d9, type: 2}
+  priority: 0
   response:
     m_PersistentCalls:
       m_Calls:
@@ -142,7 +145,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &46629935198842818
+--- !u!114 &340097567261231731
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,10 +154,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7941373002918566814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e62e373ff2c47489eb15d787a8e630, type: 3}
+  m_Script: {fileID: 11500000, guid: eb4ceec5b4fb38441b286d51f6abe097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameEvent: {fileID: 11400000, guid: 9d3f11f6515e36a45b80b8651c324212, type: 2}
+  priority: 0
   response:
     m_PersistentCalls:
       m_Calls:

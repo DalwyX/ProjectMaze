@@ -445,13 +445,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 38920419a40630543a16cf79f66a958e, type: 2}
-        m_MethodName: Action
+      - m_Target: {fileID: 11400000, guid: 843cd42cf5849094fbfca287e6c2efb3, type: 2}
+        m_MethodName: Notify
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 10245166cc379094d961e1785f69cfd8,
             type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: GeneralComponents.UILayer, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -649,8 +649,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 3417674f04aa39446a3f89402f8abfc1, type: 2}
-        m_MethodName: Action
+      - m_Target: {fileID: 11400000, guid: 4f841ac6572d8e649b88b401c9e465d9, type: 2}
+        m_MethodName: Notify
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -955,7 +955,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 9d3f11f6515e36a45b80b8651c324212, type: 2}
-        m_MethodName: Action
+        m_MethodName: Notify
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

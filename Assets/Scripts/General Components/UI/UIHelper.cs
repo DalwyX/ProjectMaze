@@ -7,10 +7,9 @@ namespace GeneralComponents
 {
     public class UIHelper : MonoBehaviour
     {
-        public void LoadScene(Object sceneIndex)
+        public void LoadScene(int sceneIndex)
         {
-            int index = ((Int)sceneIndex).value;
-            StartCoroutine(LoadSceneRoutine(index));
+            StartCoroutine(LoadSceneRoutine(sceneIndex));
         }
 
         public void QuitGame()

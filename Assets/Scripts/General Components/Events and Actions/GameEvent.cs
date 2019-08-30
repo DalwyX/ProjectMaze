@@ -1,49 +1,46 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace GeneralComponents
 {
-    [CreateAssetMenu(fileName = "New Game Event", menuName = "General Components / Events / Event")]
-    public class GameEvent : ScriptableObject
+    public abstract class GameEvent<T> : ScriptableObject
     {
-        private List<EventListener> eventListeners = new List<EventListener>();
+        [SerializeField] private List<IGameAction<T>> gameActions = new List<IGameAction<T>>();
 
-        public void Action()
+        public void Notify(T arg)
         {
-            Notify();
-        }
+            if (gameActions.Count == 0) return;
+            gameActions = gameActions.OrderBy(k => k.Priority).ToList();
 
-        public void Action(int n)
-        {
-            Int o = CreateInstance<Int>();
-            o.value = n;
-            Notify(o);
-        }
-
-        public void Action(Object v)
-        {
-            Notify(v);
-        }
-
-        private void Notify(Object o = null)
-        {
-            if (eventListeners.Count == 0) return;
-
-            foreach (var listener in eventListeners)
+            for (int i = gameActions.Count - 1; i >= 0; i--)
             {
-                listener.Notify(o);
+                gameActions[i].Execute(arg);
             }
         }
 
-        public void Subscribe(EventListener eventListener)
+        public void Subscribe(IGameAction<T> gameAction)
         {
-            eventListeners.Add(eventListener);
+            if (gameActions.Contains(gameAction)) return;
+            gameActions.Add(gameAction);
         }
 
-        public void Unsubscribe(EventListener eventListener)
+        public void Unsubscribe(IGameAction<T> gameAction)
         {
-            eventListeners.Remove(eventListener);
+            if (gameActions.Contains(gameAction))
+                gameActions.Remove(gameAction);
         }
     }
+
+    [CreateAssetMenu(fileName = "New Game Event", menuName = "General Components / Events / Game Event", order = 0)]
+    public class GameEvent : GameEvent<Void>
+    {
+        public void Notify()
+        {
+            Notify(new Void());
+        }
+    }
+
+    [System.Serializable]
+    public struct Void { }
 }

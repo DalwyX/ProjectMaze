@@ -31,9 +31,8 @@ namespace GeneralComponents
             }
         }
 
-        public void OpenUI(Object o)
+        public void OpenUI(UILayer element)
         {
-            UILayer element = (UILayer)o;
             if (!uiPool.ContainsKey(element))
             {
                 PoolNewUI(element);

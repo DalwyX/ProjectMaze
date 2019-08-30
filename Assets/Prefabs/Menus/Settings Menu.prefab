@@ -192,7 +192,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 39f05f2c578d25b4dbd0f4fc13a27591, type: 2}
-        m_MethodName: Action
+        m_MethodName: Notify
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
