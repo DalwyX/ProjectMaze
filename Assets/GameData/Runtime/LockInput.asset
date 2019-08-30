@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 058813ada84e9234bae73d681088bad0, type: 3}
-  m_Name: MazeOrigin
+  m_Script: {fileID: 11500000, guid: 3916a4095e3d47940ada48b0d2e5f61e, type: 3}
+  m_Name: LockInput
   m_EditorClassIdentifier: 
-  val: {x: -250, y: 0, z: -250}
-  defaultValue: {x: 0, y: 0, z: 0}
-  saveBetweenSession: 1
-  readOnly: 1
+  val: 0
+  defaultValue: 1
+  saveBetweenSession: 0
+  readOnly: 0

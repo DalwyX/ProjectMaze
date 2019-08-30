@@ -7,7 +7,7 @@ namespace GeneralComponents
     public class Variable<T> : ScriptableObject
     {
         [SerializeField] private T val;
-        [SerializeField] private bool readOnly;
+        [SerializeField] private bool readOnly = false;
 
         public T value
         {

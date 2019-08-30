@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: CellSize
   m_EditorClassIdentifier: 
   val: 20
+  defaultValue: 0
+  saveBetweenSession: 1
   readOnly: 1

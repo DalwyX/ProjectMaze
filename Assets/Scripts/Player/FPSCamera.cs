@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GeneralComponents;
 
 namespace ProjectMaze
 {
@@ -8,6 +9,7 @@ namespace ProjectMaze
     {
         [SerializeField] private float sensitivity = 5f;
         [SerializeField] private float smoothing = 2f;
+        [SerializeField] private Bool inputLock;
         private Transform character;
         private Vector3 currentLook;
         private Vector3 smoothMov;
@@ -15,15 +17,12 @@ namespace ProjectMaze
         private void Awake()
         {
             character = transform.parent;
+            inputLock.value = true;
         }
-
-        //private void Start()
-        //{
-        //    Cursor.lockState = CursorLockMode.Locked;
-        //}
 
         private void Update()
         {
+            if (inputLock.value) return;
             float h = Input.GetAxis("Mouse X");
             float v = Input.GetAxis("Mouse Y");
 
