@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: LockInput
   m_EditorClassIdentifier: 
   val: 0
-  defaultValue: 1
-  saveBetweenSession: 0
   readOnly: 0

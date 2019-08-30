@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dbec540eec47954791effc33fa6a312, type: 3}
-  m_Name: Checkbox Score
+  m_Script: {fileID: 11500000, guid: 78b186c5a3dec5c47b7f150b2cfe1dde, type: 3}
+  m_Name: GameOver
   m_EditorClassIdentifier: 
-  val: 638
-  readOnly: 0
+  UIPrefab: {fileID: 886236278091438916, guid: d0a3e6e6be6ca444e9bf41fdf9384435, type: 3}
+  backButtonUI: {fileID: 0}
+  UITimeScale: 0
+  cursorLockMode: 0
+  closeable: 0

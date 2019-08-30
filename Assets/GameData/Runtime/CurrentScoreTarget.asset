@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dbec540eec47954791effc33fa6a312, type: 3}
   m_Name: CurrentScoreTarget
   m_EditorClassIdentifier: 
-  val: 0
+  val: 625
   readOnly: 0
