@@ -5272,6 +5272,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467886005}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1468950152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7941373002918566814, guid: 74f5784a426112a4d9a0cdd0d78aa0f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 359793137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1468950153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468950152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4ceec5b4fb38441b286d51f6abe097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2ff736dcc163e6544956009a2424e7ad, type: 2}
+  priority: 0
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1468950158}
+        m_MethodName: OpenUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: e0cb50fbacfa91143a412859e08c5b3c,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: GeneralComponents.UILayer, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1468950158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7941373002918566815, guid: 74f5784a426112a4d9a0cdd0d78aa0f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 359793137}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468950152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f832f270cfdb849b4b95385273d42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1491649508
 GameObject:
   m_ObjectHideFlags: 0
@@ -7633,7 +7680,7 @@ MonoBehaviour:
   targets:
   - name: Display Score
     targetScore: 1
-    unlockEvent: {fileID: 11400000, guid: 44970b2e7568c9349a906414932283df, type: 2}
+    unlockEvent: {fileID: 11400000, guid: c166e45d91df78b4faa3cf93e1c60945, type: 2}
   - name: Unlock Run
     targetScore: 10
     unlockEvent: {fileID: 11400000, guid: a7111b143354aed438ba6299ee8bb0e1, type: 2}
