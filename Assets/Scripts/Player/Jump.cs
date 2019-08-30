@@ -11,6 +11,7 @@ namespace ProjectMaze
         [SerializeField] private float jumpForce = 5;
         private Rigidbody rb;
         private Collider col;
+        private bool isJumpActivate;
 
         private void Awake()
         {
@@ -28,7 +29,7 @@ namespace ProjectMaze
 
         private void PerformJump()
         {
-            if (isGrounded())
+            if (isGrounded() && isJumpActivate)
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             
         }
@@ -36,6 +37,11 @@ namespace ProjectMaze
         private bool isGrounded()
         {
             return Physics.Raycast(transform.position, Vector3.down, col.bounds.extents.y + 0.1f);
+        }
+
+        public void UnlockJump()
+        {
+            isJumpActivate = true;
         }
     } 
 }

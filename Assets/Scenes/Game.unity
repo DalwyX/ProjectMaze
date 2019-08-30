@@ -239,7 +239,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 106038326}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 7.48, z: 0}
+  m_LocalPosition: {x: 0, y: 7.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1619074249}
@@ -1908,9 +1908,9 @@ RectTransform:
   m_Father: {fileID: 1413710726}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &555652630
@@ -2165,6 +2165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 641842299}
+  - component: {fileID: 641842300}
   m_Layer: 0
   m_Name: Enviroment
   m_TagString: Untagged
@@ -2200,6 +2201,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &641842300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641842298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4ceec5b4fb38441b286d51f6abe097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 44970b2e7568c9349a906414932283df, type: 2}
+  priority: 0
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 371853109}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 368045414}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &713154567
 GameObject:
   m_ObjectHideFlags: 0
@@ -3050,7 +3090,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &899795182
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3304,7 +3344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 9.999995}
+  m_AnchoredPosition: {x: 0, y: 1.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!54 &963194233
@@ -4480,9 +4520,9 @@ RectTransform:
   m_Father: {fileID: 1413710726}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 210, y: -50}
   m_SizeDelta: {x: 20, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1306387804
@@ -4615,7 +4655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1413710726
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5706,6 +5746,8 @@ GameObject:
   - component: {fileID: 1619074252}
   - component: {fileID: 1619074251}
   - component: {fileID: 1619074250}
+  - component: {fileID: 1619074253}
+  - component: {fileID: 1619074254}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5836,6 +5878,62 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 2
+--- !u!114 &1619074253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619074245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4ceec5b4fb38441b286d51f6abe097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a7111b143354aed438ba6299ee8bb0e1, type: 2}
+  priority: 0
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1619074251}
+        m_MethodName: UnlockRun
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1619074254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619074245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4ceec5b4fb38441b286d51f6abe097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 9e25ecea1c3e32b43bfbadf9bbff7c47, type: 2}
+  priority: 0
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1619074250}
+        m_MethodName: UnlockJump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1635535925
 GameObject:
   m_ObjectHideFlags: 0
@@ -6067,6 +6165,8 @@ GameObject:
   - component: {fileID: 1718519806}
   - component: {fileID: 1718519805}
   - component: {fileID: 1718519804}
+  - component: {fileID: 1718519808}
+  - component: {fileID: 1718519809}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -6155,6 +6255,73 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1718519808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718519803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4ceec5b4fb38441b286d51f6abe097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: c166e45d91df78b4faa3cf93e1c60945, type: 2}
+  priority: 1
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1413710725}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1413710730}
+        m_MethodName: UpdateScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &1718519809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718519803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4ceec5b4fb38441b286d51f6abe097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2ff736dcc163e6544956009a2424e7ad, type: 2}
+  priority: 0
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 899795181}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1741790259
 GameObject:
   m_ObjectHideFlags: 0
@@ -6265,7 +6432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1766549634
 Transform:
   m_ObjectHideFlags: 0
@@ -6436,7 +6603,7 @@ PrefabInstance:
     - target: {fileID: 3103561656794613565, guid: 3e9257d9dfa21f345908d84d158ff8d1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3103561656794613562, guid: 3e9257d9dfa21f345908d84d158ff8d1,
         type: 3}
@@ -6675,9 +6842,9 @@ RectTransform:
   m_Father: {fileID: 1413710726}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 270, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1904058401
@@ -7277,7 +7444,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84406eafc2858574bbb507774b706e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets: 0a0000001900000064000000c800000071020000
+  targets:
+  - name: Display Score
+    targetScore: 1
+    unlockEvent: {fileID: 11400000, guid: c166e45d91df78b4faa3cf93e1c60945, type: 2}
+  - name: Unlock Run
+    targetScore: 10
+    unlockEvent: {fileID: 11400000, guid: a7111b143354aed438ba6299ee8bb0e1, type: 2}
+  - name: Display Mini Map
+    targetScore: 25
+    unlockEvent: {fileID: 11400000, guid: 2ff736dcc163e6544956009a2424e7ad, type: 2}
+  - name: Show Message
+    targetScore: 100
+    unlockEvent: {fileID: 11400000, guid: ffc98f479968b8c4193347c1dec561a9, type: 2}
+  - name: Unlock Jump
+    targetScore: 250
+    unlockEvent: {fileID: 11400000, guid: 9e25ecea1c3e32b43bfbadf9bbff7c47, type: 2}
+  - name: Unlock Maze
+    targetScore: 625
+    unlockEvent: {fileID: 11400000, guid: 44970b2e7568c9349a906414932283df, type: 2}
   currentScore: {fileID: 11400000, guid: 0be2ff204c4acce499756f76df668147, type: 2}
   currentTarget: {fileID: 11400000, guid: 73e03ae0cdd49b247bb432a2f9c14709, type: 2}
 --- !u!4 &2069401163
@@ -7354,9 +7539,9 @@ RectTransform:
   m_Father: {fileID: 1413710726}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2108357107
