@@ -189,4 +189,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkboxActivated: {fileID: 11400000, guid: 53c7497eff57c16448741330e5fa0460, type: 2}
+  checkboxTrigger: {fileID: 11400000, guid: d40fd40ec0b4f874386cdfad44720aca, type: 2}
   checkboxOnMat: {fileID: 2100000, guid: d63f8ece18b83a342a1f2dd72bbe72cb, type: 2}

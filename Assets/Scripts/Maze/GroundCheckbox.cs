@@ -6,6 +6,7 @@ namespace ProjectMaze
     public class GroundCheckbox : MonoBehaviour
     {
         [SerializeField] private GameEvent checkboxActivated;
+        [SerializeField] private GameEvent checkboxTrigger;
         [SerializeField] private Material checkboxOnMat;
         private MeshRenderer mr;
         private Material mat;
@@ -40,6 +41,7 @@ namespace ProjectMaze
         }
         private void FadeIn()
         {
+            checkboxTrigger?.Notify();
             Color c = mat.GetColor("_EmissionColor") * 1.25f;
             mat.SetColor("_EmissionColor", c);
         }
