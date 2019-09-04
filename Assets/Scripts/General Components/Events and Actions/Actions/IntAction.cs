@@ -1,9 +1,7 @@
-﻿using UnityEngine.Events;
+﻿using UnityEngine;
 
 namespace GeneralComponents
 {
-    public class IntAction : GameAction<int, IntEvent, UnityIntEvent> { }
-
-    [System.Serializable]
-    public class UnityIntEvent : UnityEvent<int> { }
+    [CreateAssetMenu(fileName = "New Int Action", menuName = "General Components / Events and Actions / Int Action", order = 3)]
+    public class IntAction : GameAction<int> { } 
 }

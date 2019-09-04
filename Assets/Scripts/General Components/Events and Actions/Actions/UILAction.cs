@@ -1,9 +1,7 @@
-﻿using UnityEngine.Events;
+﻿using UnityEngine;
 
 namespace GeneralComponents
 {
-    public class UILAction : GameAction<UILayer, UILEvent, UnityUILEvent> { }
-
-    [System.Serializable]
-    public class UnityUILEvent : UnityEvent<UILayer> { }
+    [CreateAssetMenu(fileName = "New UILayer Action", menuName = "General Components / Events and Actions / UILayer Action", order = 10)]
+    public class UILAction : GameAction<UILayer> { }
 }

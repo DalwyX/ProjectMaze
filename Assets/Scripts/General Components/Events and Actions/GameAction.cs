@@ -1,40 +1,44 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace GeneralComponents
 {
-    public abstract class GameAction<T, E, U> : MonoBehaviour, IGameAction<T> where E : GameEvent<T> where U : UnityEvent<T>
+    public abstract class GameAction<T> : ScriptableObject
     {
-        [SerializeField] private E gameEvent;
-        [SerializeField] private int priority = 0;
-        public U response;
-        public int Priority => priority;
-        //[SerializeField] UnityResponse response = new UnityResponse();
+        [SerializeField] private List<IGameExecutor<T>> gameActions = new List<IGameExecutor<T>>();
 
-
-        [System.Serializable]
-        public class UnityResponse : UnityEvent<T> { }
-
-        private void OnEnable()
+        public void Notify(T arg)
         {
-            if (gameEvent == null) return;
-            gameEvent.Subscribe(this);
+            if (gameActions.Count == 0) return;
+
+            for (int i = gameActions.Count - 1; i >= 0; i--)
+            {
+                gameActions[i].Execute(arg);
+            }
         }
 
-        private void OnDisable()
+        public void Subscribe(IGameExecutor<T> gameAction)
         {
-            if (gameEvent == null) return;
-            gameEvent.Unsubscribe(this);
+            if (gameActions.Contains(gameAction)) return;
+            gameActions.Add(gameAction);
         }
 
-        public void Execute(T arg)
+        public void Unsubscribe(IGameExecutor<T> gameAction)
         {
-            response?.Invoke(arg);
+            if (gameActions.Contains(gameAction))
+                gameActions.Remove(gameAction);
+        }
+    }
+
+    [CreateAssetMenu(fileName = "New Void Action", menuName = "General Components / Events and Actions / Void Action", order = 1)]
+    public class VoidAction : GameAction<Void>
+    {
+        public void Notify()
+        {
+            Notify(new Void());
         }
     }
 
     [System.Serializable]
-    public class UnityVoidEvent : UnityEvent<Void> { }
-
-    public class GameAction : GameAction<Void, GameEvent, UnityVoidEvent> { }
+    public struct Void { }
 }

@@ -23,12 +23,12 @@ public class Settings : MonoBehaviour
         if (soundSlider.value != lastSound)
         {
             PlayerPrefs.SetFloat("SOUND", soundSlider.value);
-            volumeChanged?.Notify();
+            volumeChanged?.Raise();
         }
         if (SFXSlider.value != lastSFX)
         {
             PlayerPrefs.SetFloat("SFX", SFXSlider.value);
-            volumeChanged?.Notify();
+            volumeChanged?.Raise();
         }
     }
 }

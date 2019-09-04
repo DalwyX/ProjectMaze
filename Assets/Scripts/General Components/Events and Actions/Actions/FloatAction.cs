@@ -1,9 +1,7 @@
-﻿using UnityEngine.Events;
+﻿using UnityEngine;
 
 namespace GeneralComponents
 {
-    public class FloatAction : GameAction<float, FloatEvent, UnityFloatEvent> { }
-
-    [System.Serializable]
-    public class UnityFloatEvent : UnityEvent<float> { }
+    [CreateAssetMenu(fileName = "New Float Action", menuName = "General Components / Events and Actions / Float Action", order = 4)]
+    public class FloatAction : GameAction<float> { }
 }

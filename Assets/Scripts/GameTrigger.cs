@@ -8,7 +8,7 @@ namespace ProjectMaze
     [RequireComponent(typeof(Collider))]
     public class GameTrigger : MonoBehaviour
     {
-        [SerializeField] private UILEvent triggerEvent;
+        [SerializeField] private UILAction triggerEvent;
         [SerializeField] private UILayer layerToLoad;
 
         private void OnTriggerEnter(Collider other)

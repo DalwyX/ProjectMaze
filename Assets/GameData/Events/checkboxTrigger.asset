@@ -9,6 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 202689a80e9b7134dbbe7d2afb5e33f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 32ae48751aad6214fbd5a5ca64f65f58, type: 3}
   m_Name: checkboxTrigger
   m_EditorClassIdentifier: 
+  eventActions:
+    m_PersistentCalls:
+      m_Calls: []

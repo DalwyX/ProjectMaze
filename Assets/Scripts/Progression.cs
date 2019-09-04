@@ -37,7 +37,7 @@ namespace ProjectMaze
                     targets.RemoveAt(0);
                     if (targets.Count > 0)
                         currentTarget.value = targets[0].targetScore;
-                    e?.Notify();
+                    e?.Raise();
                 }
             }
         }

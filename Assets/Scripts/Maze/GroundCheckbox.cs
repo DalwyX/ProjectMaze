@@ -36,12 +36,12 @@ namespace ProjectMaze
             mr = GetComponent<MeshRenderer>();
             mr.sharedMaterial = checkboxOnMat;
             mat = mr.material;
-            checkboxActivated?.Notify();
+            checkboxActivated?.Raise();
             FadeOut();
         }
         private void FadeIn()
         {
-            checkboxTrigger?.Notify();
+            checkboxTrigger?.Raise();
             Color c = mat.GetColor("_EmissionColor") * 1.25f;
             mat.SetColor("_EmissionColor", c);
         }
