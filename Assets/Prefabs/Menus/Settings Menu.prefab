@@ -191,8 +191,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 39f05f2c578d25b4dbd0f4fc13a27591, type: 2}
-        m_MethodName: Notify
+      - m_Target: {fileID: 11400000, guid: 6fac59c72adf19f49a6858e2a7382e89, type: 2}
+        m_MethodName: Raise
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -790,7 +790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundSlider: {fileID: 9069887709360817631}
   SFXSlider: {fileID: 6518099832105289638}
-  volumeChanged: {fileID: 11400000, guid: 46def9d326b4c0e42904329efc629738, type: 2}
+  volumeChanged: {fileID: 11400000, guid: 4dc721ec81a48454ea343db48b839206, type: 2}
 --- !u!1 &886236279726403996
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,12 +8,11 @@ namespace ProjectMaze
     [RequireComponent(typeof(Collider))]
     public class GameTrigger : MonoBehaviour
     {
-        [SerializeField] private UILAction triggerEvent;
-        [SerializeField] private UILayer layerToLoad;
+        [SerializeField] private GameEvent triggerEvent;
 
         private void OnTriggerEnter(Collider other)
         {
-            triggerEvent?.Notify(layerToLoad);
+            triggerEvent?.Raise();
         }
     } 
 }

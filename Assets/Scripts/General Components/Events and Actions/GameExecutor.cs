@@ -5,7 +5,7 @@ namespace GeneralComponents
 {
     public abstract class GameExecutor<T, E, U> : MonoBehaviour, IGameExecutor<T> where E : GameAction<T> where U : UnityEvent<T>
     {
-        [SerializeField] private E gameEvent;
+        [SerializeField] private E gameAction;
         public U response;
 
         [System.Serializable]
@@ -13,14 +13,14 @@ namespace GeneralComponents
 
         private void OnEnable()
         {
-            if (gameEvent == null) return;
-            gameEvent.Subscribe(this);
+            if (gameAction == null) return;
+            gameAction.Subscribe(this);
         }
 
         private void OnDisable()
         {
-            if (gameEvent == null) return;
-            gameEvent.Unsubscribe(this);
+            if (gameAction == null) return;
+            gameAction.Unsubscribe(this);
         }
 
         public void Execute(T arg)
@@ -28,9 +28,4 @@ namespace GeneralComponents
             response?.Invoke(arg);
         }
     }
-
-    [System.Serializable]
-    public class UnityVoidEvent : UnityEvent<Void> { }
-
-    public class VoidExecutor : GameExecutor<Void, VoidAction, UnityVoidEvent> { }
 }

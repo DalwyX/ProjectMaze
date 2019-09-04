@@ -118,9 +118,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 4f841ac6572d8e649b88b401c9e465d9, type: 2}
-        m_MethodName: Notify
-        m_Mode: 3
+      - m_Target: {fileID: 11400000, guid: 307fc48e9252a814cad0dd4e5f5b5fc6, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -900,9 +900,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 4f841ac6572d8e649b88b401c9e465d9, type: 2}
-        m_MethodName: Notify
-        m_Mode: 3
+      - m_Target: {fileID: 11400000, guid: 9725359ca37357940b597a15baaecd16, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
