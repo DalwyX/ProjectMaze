@@ -2,6 +2,6 @@
 
 namespace GeneralComponents
 {
-    [CreateAssetMenu(fileName = "New Float Variable", menuName = "General Components / Variables / Float", order = 2)]
+    [CreateAssetMenu(fileName = "New Float Variable", menuName = GPUtility.VARIABLES_PATH + "Float", order = 2)]
     public class Float : Variable<float> { } 
 }

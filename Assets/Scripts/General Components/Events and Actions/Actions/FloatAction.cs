@@ -2,6 +2,6 @@
 
 namespace GeneralComponents
 {
-    [CreateAssetMenu(fileName = "New Float Action", menuName = "General Components / Events and Actions / Float Action", order = 4)]
+    [CreateAssetMenu(fileName = "New Float Action", menuName = GPUtility.EVENTS_PATH + "Float Action", order = 4)]
     public class FloatAction : GameAction<float> { }
 }

@@ -2,6 +2,6 @@
 
 namespace GeneralComponents
 {
-    [CreateAssetMenu(fileName = "New String Action", menuName = "General Components / Events and Actions / String Action", order = 5)]
+    [CreateAssetMenu(fileName = "New String Action", menuName = GPUtility.EVENTS_PATH + "String Action", order = 5)]
     public class StringAction : GameAction<string> { }
 }

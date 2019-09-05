@@ -2,7 +2,6 @@
 
 namespace GeneralComponents
 {
-    [CreateAssetMenu(fileName = "New Bool Variable", menuName = "General Components / Variables / Bool", order = 0)]
+    [CreateAssetMenu(fileName = "New Bool Variable", menuName = GPUtility.VARIABLES_PATH + "Bool", order = 0)]
     public class Bool : Variable<bool> { }
 }
-
