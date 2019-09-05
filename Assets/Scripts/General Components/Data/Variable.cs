@@ -8,6 +8,7 @@ namespace GeneralComponents
     {
         [SerializeField] private T val;
         [SerializeField] private bool readOnly = false;
+        [SerializeField] private GameEvent valueChangedEvent;
 
         public T value
         {
@@ -23,6 +24,7 @@ namespace GeneralComponents
                     return;
                 }
                 val = value;
+                valueChangedEvent?.Raise();
             }
         }
     }
